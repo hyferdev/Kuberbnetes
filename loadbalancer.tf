@@ -12,6 +12,7 @@ resource "aws_lb_target_group" "my_target_group" {
   vpc_id   = aws_vpc.my_vpc.id
 }
 
+/*
 resource "aws_lb_target_group_attachment" "attachment_1" {
   target_group_arn = aws_lb_target_group.my_target_group.arn
   target_id        = aws_instance.Red1.id
@@ -23,6 +24,7 @@ resource "aws_lb_target_group_attachment" "attachment_2" {
   target_id        = aws_instance.Red2.id
   port             = 80
 }
+*/
 
 resource "aws_lb_listener" "my_listener" {
   load_balancer_arn = aws_lb.my_load_balancer.arn
