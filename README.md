@@ -6,9 +6,9 @@ This repository contains the necessary files and instructions to deploy a Kubern
 
 Before you begin, ensure you have the following:
 
-1. [Terraform](https://www.terraform.io/downloads.html) installed on your local machine.
-2. Access to a cloud provider account (e.g., AWS, GCP, Azure) and the necessary credentials to create resources.
-3. A working knowledge of Kubernetes and basic understanding of Terraform.
+1. [Terraform](https://www.terraform.io/downloads.html) installed on your local machine and connected to Terraform Cloud.
+2. Access to a cloud provider account (AWS in this case) and the necessary credentials to create resources.
+3. A working knowledge of Kubernetes and Terraform.
 
 ## Getting Started
 
@@ -49,10 +49,16 @@ To get started with this Kubernetes deployment, follow these steps:
    ```
 
    Confirm the deployment by typing `yes` when prompted. The provisioning process may take several minutes, depending on your infrastructure size.
+   *Note that you will have to be signed in as the IAM user that created the nodes to view them in AWS management console, use the following command if the user only has 
+    CLI access
 
-7. Once the deployment is complete, Terraform will output information about the cluster, such as the endpoint and authentication details. Make note of this information as you will need it to interact with the Kubernetes cluster.
+   ```bash
+   kubectl get nodes
+   ```
 
-8. You can now interact with your Kubernetes cluster using `kubectl`. Ensure you have `kubectl` installed and configured to use the newly created cluster. Use the endpoint and authentication details provided by Terraform to set up your `kubectl` configuration.
+8. Once the deployment is complete, Terraform will output information about the cluster, such as the endpoint and authentication details. Make note of this information as you will need it to interact with the Kubernetes cluster. (Not yet implemented)
+
+9. You can now interact with your Kubernetes cluster using `kubectl`. Ensure you have `kubectl` installed and configured to use the newly created cluster. Use the endpoint and authentication details provided by Terraform to set up your `kubectl` configuration.
 
 ## Cleaning Up
 
