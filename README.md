@@ -49,6 +49,7 @@ To get started with this Kubernetes deployment, follow these steps:
    ```
 
    Confirm the deployment by typing `yes` when prompted. The provisioning process may take several minutes, depending on your infrastructure size.
+
    *Note that you will have to be signed in as the IAM user that created the nodes to view them in AWS management console, use the following command if the user only has 
     CLI access
 
