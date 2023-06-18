@@ -50,16 +50,14 @@ To get started with this Kubernetes deployment, follow these steps:
 
    Confirm the deployment by typing `yes` when prompted. The provisioning process may take several minutes, depending on your infrastructure size.
 
-   *Note that you will have to be signed in as the IAM user that created the nodes to view them in AWS management console, use the following command if the user only has 
-    CLI access
+8. Once the deployment is complete, Terraform will output information about the cluster, such as the endpoint and authentication details. Make note of this information as you will need it to interact with the Kubernetes cluster. (Not yet implemented)
+
+9. You can now interact with your Kubernetes cluster using `kubectl`. Ensure you have `kubectl` installed and configured to use the newly created cluster. Use the endpoint and authentication details provided by Terraform to set up your `kubectl` configuration. Note that you will have to be signed in as the IAM user that created the nodes to view them in AWS management console, use the following command if the user only has CLI access:
 
    ```bash
    kubectl get nodes
    ```
-
-8. Once the deployment is complete, Terraform will output information about the cluster, such as the endpoint and authentication details. Make note of this information as you will need it to interact with the Kubernetes cluster. (Not yet implemented)
-
-9. You can now interact with your Kubernetes cluster using `kubectl`. Ensure you have `kubectl` installed and configured to use the newly created cluster. Use the endpoint and authentication details provided by Terraform to set up your `kubectl` configuration.
+  
 
 ## Cleaning Up
 
