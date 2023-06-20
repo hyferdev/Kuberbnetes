@@ -1,6 +1,10 @@
-/* work-in-progress
-output "public_dns_name" {
-  description = "Public DNS names of the load balancer for this project"
-  value       = module.elb_http.elb_dns_name
+output "EKS_API_Server_Endpoint" {
+  description = "EKS API server endpoint"
+  value       = aws_eks_cluster.my_cluster.endpoint
 }
-*/
+
+output "EKS_Certificate_Authority" {
+  description = "EKS Certificate Authority (CA) data"
+  value       = aws_eks_cluster.my_cluster.certificate_authority[0].data
+}
+
