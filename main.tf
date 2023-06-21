@@ -1,15 +1,17 @@
 provider "aws" {
-  region = "us-west-2"  # Replace with your desired region
+  region = "us-west-2"
 }
 
+# Create your VPC
 resource "aws_vpc" "my_vpc" {
-  cidr_block = "10.1.0.0/16"  # Replace with your desired CIDR block
+  cidr_block = "10.1.0.0/16"
 
   tags = {
-    Name = "my-vpc"  # Replace with your desired VPC name
+    Name = "hyfervpc"
   }
 }
 
+# Create your subnets
 resource "aws_subnet" "my_subnet_1" {
   cidr_block = "10.1.1.0/24"
   vpc_id     = aws_vpc.my_vpc.id
@@ -52,36 +54,40 @@ resource "aws_subnet" "my_subnet_4" {
   }
 }
 
+# Create your internet gateway
 resource "aws_internet_gateway" "my_igw" {
   vpc_id = aws_vpc.my_vpc.id
 
   tags = {
-    Name = "my-igw"  # Replace with your desired Internet Gateway name
+    Name = "my-igw"
   }
 }
 
-resource "aws_route_table" "pub_rt" {    #public route table
+# Create route tables
+resource "aws_route_table" "pub_rt" {
   vpc_id = aws_vpc.my_vpc.id
 
   tags = {
-    Name = "pub-rt"  # Replace with your desired Route Table name
+    Name = "pub-rt"
   }
 }
 
-resource "aws_route_table" "priv_rt" {    #private route table
+resource "aws_route_table" "priv_rt" {
   vpc_id = aws_vpc.my_vpc.id
 
   tags = {
-    Name = "priv-rt"  # Replace with your desired Route Table name
+    Name = "priv-rt"
   }
 }
 
+# Associate public route table with internet gateway
 resource "aws_route" "my_route" {
   route_table_id = aws_route_table.pub_rt.id
   destination_cidr_block = "0.0.0.0/0"
   gateway_id = aws_internet_gateway.my_igw.id
 }
 
+# Associate route tables with subnets
 resource "aws_route_table_association" "my_rta_1" {
   subnet_id      = aws_subnet.my_subnet_1.id
   route_table_id = aws_route_table.pub_rt.id

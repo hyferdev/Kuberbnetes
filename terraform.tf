@@ -1,5 +1,5 @@
+# Terraform cloud configs
 terraform {
-	# edit this to match your terraform cloud configs
   cloud {
       organization = "hyfer"
       workspaces {

@@ -1,3 +1,4 @@
+# Create security group
 resource "aws_security_group" "web_access" {
   name_prefix = "web_access"
   vpc_id      = "${aws_vpc.my_vpc.id}"
