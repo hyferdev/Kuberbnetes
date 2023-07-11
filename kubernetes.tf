@@ -81,5 +81,9 @@ resource "aws_eks_node_group" "my_node_group" {
     min_size     = 4
     max_size     = 7
   }
+  remote_access {
+    ec2_ssh_key = "RedKeys"
+    source_security_group_ids = [aws_security_group.web_access.id]
+  }
 }
 
