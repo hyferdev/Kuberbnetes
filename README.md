@@ -17,13 +17,13 @@ To get started with this Kubernetes deployment, follow these steps:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/hyferdev/Kuberbnetes.git
+   git clone https://github.com/hyferdev/Kubernetes.git
    ```
 
 2. Navigate to the cloned directory:
 
    ```bash
-   cd kubernetes-deployment
+   cd Kubernetes
    ```
 
 3. Review the Terraform configuration files in the `terraform` directory. Modify the files as per your requirements, such as the cloud provider, region, cluster size, or any other desired configuration.
