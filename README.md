@@ -17,7 +17,7 @@ To get started with this Kubernetes deployment, follow these steps:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/kubernetes-deployment.git
+   git clone https://github.com/hyferdev/Kuberbnetes.git
    ```
 
 2. Navigate to the cloned directory:
