@@ -1,3 +1,9 @@
+# Kubernetes Study Sessions - Get Prepped for CKA
+
+[Certified Kubernetes Administrator Study Sessions - Core Concepts](https://www.youtube.com/watch?v=R-XmozcyovI&t=2s)
+
+[Certified Kubernetes Administrator Study Sessions - Pod Scheduling](https://www.youtube.com/watch?v=R6lvA0Z_5z8&t=5s)
+
 # Kubernetes Deployment with Terraform
 
 This repository contains the necessary files and instructions to deploy a Kubernetes cluster using Terraform. With Terraform, you can define and manage infrastructure as code, making it easier to provision and maintain a Kubernetes environment.
