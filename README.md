@@ -1,8 +1,6 @@
 # Kubernetes Study Sessions - Get Prepped for CKA
 
-[Certified Kubernetes Administrator Study Sessions - Core Concepts](https://www.youtube.com/watch?v=R-XmozcyovI&t=2s)
-
-[Certified Kubernetes Administrator Study Sessions - Pod Scheduling](https://www.youtube.com/watch?v=R6lvA0Z_5z8&t=5s)
+[Journey To Being A Certified Kubernetes Administrator (CKA)](youtube.com/playlist?list=PLwySPfR0MU0X62rge-HZfrrqRDegQnAiD)
 
 # Kubernetes Deployment with Terraform
 
